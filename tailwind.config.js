@@ -1,3 +1,5 @@
+import { fontFamily } from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,10 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        Roboto: ['var(--font-roboto)', ...fontFamily.sans],
+        RobotoBold: ['var(--font-roboto-bold)', ...fontFamily.sans],
+        Playfair: ['var(--font-playfair)', ...fontFamily.sans],
+        WorkSans: ['var(--font-worksans)', ...fontFamily.sans],
       },
     },
   },
